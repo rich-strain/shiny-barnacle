@@ -16,5 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "8.2.4"
   }
 }
