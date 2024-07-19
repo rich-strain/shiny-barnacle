@@ -6,7 +6,7 @@ describe('Validate Shapes', () => {
     it('Should Render a Triangle For The SVG', () => {
       const shape = new Triangle();
       shape.setColor('blue');
-      expect(shape.render()).toEqual('<polygon points="150,18 244,182 56,182" fill="blue" />');
+      expect(shape.renderShape()).toEqual('<polygon points="150,18 244,182 56,182" fill="blue" />');
     });
   });
   describe('Square', () => {
@@ -14,14 +14,14 @@ describe('Validate Shapes', () => {
       // Callback function?
       const shape = new Square();
       shape.setColor('red');
-      expect(shape.render()).toEqual('<rect width="150" height="150" fill="red" />');
+      expect(shape.renderShape()).toEqual('<rect width="150" height="150" x="75" y="25" fill="red" />');
     });
   });
   describe('Circle', () => {
     it('Should Render a Circle For The SVG', () => {
       const shape = new Circle();
       shape.setColor('green');
-      expect(shape.render()).toEqual('<circle cx="150" cy="100" r="80" fill="green" />');
+      expect(shape.renderShape()).toEqual('<circle cx="150" cy="100" r="90" fill="green" />');
     });
   });
 });

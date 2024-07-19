@@ -38,24 +38,23 @@ function init() {
 
     switch (data.shape) {
       case 'Triangle':
-        logo = new Triangle();
-        logo.setColor('data.fillColor');
-        logo.render();
-        console.log(logo);
+        logo = new Triangle(data.fillColor, data.text, data.textColor);
         break;
       case 'Square':
         logo = new Square();
-        logo.setColor('data.fillColor');
-        console.log(logo);
+        logo.setColor(data.fillColor);
+        logo.setText(data.text);
+        logo.setTextColor(data.textColor);
         break;
       case 'Circle':
         logo = new Circle();
-        logo.setColor('data.fillColor');
-        console.log(logo);
+        logo.setColor(data.fillColor);
+        logo.setText(data.text);
+        logo.setTextColor(data.textColor);
         break;
     }
 
-    //writeToFile('./output/log.svg', logo);
+    writeToFile('./examples/logo.svg', logo.renderSVG());
   });
 }
 
