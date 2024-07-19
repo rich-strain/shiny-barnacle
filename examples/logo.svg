@@ -1,5 +1,5 @@
 
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
-      <rect width="150" height="150" x="75" y="25" fill="#351c15" />
-      <text x="150" y="125" font-size="60" text-anchor="middle" fill="#ffb500">UPS</text>
+      <polygon points="150,18 244,182 56,182" fill="#000000" />
+      <text x="150" y="125" font-size="40" text-anchor="middle" fill="white">ΛΛΛ</text>
     </svg>

@@ -41,7 +41,7 @@ const questions = [
       if (input.length <= 3) {
         return true;
       } else {
-        return 'Username must be 3 characters or less.';
+        return 'Logo text must be 3 characters or less.';
       }
     },
   },
