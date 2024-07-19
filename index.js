@@ -3,12 +3,41 @@ const inquirer = require('inquirer');
 const colors = require('colors');
 const { Circle, Triangle, Square } = require('./lib/shapes.js');
 
+// Create Array of The 16 Valid Color Strings
+const validColors = [
+  'red',
+  'green',
+  'blue',
+  'yellow',
+  'purple',
+  'orange',
+  'pink',
+  'black',
+  'white',
+  'gray',
+  'brown',
+  'cyan',
+  'magenta',
+  'silver',
+  'gold',
+  'lime',
+];
+// Validate Color Input
+const validateColor = (input) => {
+  if (/^#[0-9A-Fa-f]{6}$/.test(input) || validColors.includes(input.toLowerCase())) {
+    return true;
+  } else {
+    return 'Please enter a valid color keyword or a hexadecimal value (e.g., #FF0000).';
+  }
+};
+
 const questions = [
   {
     type: 'input',
     name: 'text',
     message: colors.green('What is the text for your logo?'),
     validate: function (input) {
+      // Validate Function Inside Inquirer Prompt
       if (input.length <= 3) {
         return true;
       } else {
@@ -20,6 +49,7 @@ const questions = [
     type: 'input',
     name: 'textColor',
     message: colors.blue('What is the color for your logo text?'),
+    validate: validateColor,
   },
   {
     type: 'list',
@@ -31,6 +61,7 @@ const questions = [
     type: 'input',
     name: 'fillColor',
     message: colors.blue('What is the color of your logo?'),
+    validate: validateColor,
   },
 ];
 
