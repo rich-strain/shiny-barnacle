@@ -8,6 +8,13 @@ const questions = [
     type: 'input',
     name: 'text',
     message: colors.green('What is the text for your logo?'),
+    validate: function (input) {
+      if (input.length <= 3) {
+        return true;
+      } else {
+        return 'Username must be 3 characters or less.';
+      }
+    },
   },
   {
     type: 'input',
